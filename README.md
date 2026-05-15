@@ -35,7 +35,8 @@ Active Directory example:
 <img width="1730" height="845" alt="image" src="https://github.com/user-attachments/assets/f95f4ab5-9627-4649-8b32-4e0c022c94c2" />
 
 Change log example:
-<img width="959" height="90" alt="image" src="https://github.com/user-attachments/assets/91a3ab37-0969-42a7-bad0-57fd2c8c618f" />
+<img width="947" height="146" alt="image" src="https://github.com/user-attachments/assets/c82ca0f9-0570-40a9-a88e-6d49d61ec663" />
+
 
 
 ## Required NinjaOne custom fields
@@ -47,7 +48,7 @@ Change log example:
 | `LAPSlocalAdminsReport`        | WYSIWYG  | Receives the HTML local-admin report                 | `WRITE`            |
 | `LAPSauthorizedLocalAdmins`    | Text     | Comma-separated list of authorized administrators    | `READ`             |
 | `LAPSunauthorizedAdminsFound`  | Checkbox | Set to `true` when unauthorized admins are detected  | `WRITE`           |
-|`LAPSchangelog`                 |Multi-line| Per-run history of changes performed by the script  | `READ` `WRITE`   |
+| `LAPSchangelog`                 |Multi-line| Per-run history of changes performed by the script  | `READ` `WRITE`   |
 
 The script (running as **SYSTEM**) needs write access to all of the
 fields above. Field names can be changed at the top of the script.
