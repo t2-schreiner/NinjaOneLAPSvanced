@@ -26,16 +26,16 @@ report and a changelog. Additionally a full audit log is written to the machine.
    raise an alarm.
 
 Local user example:
-<img width="1785" height="814" alt="image" src="https://github.com/user-attachments/assets/07fff073-3295-4b4e-8b3d-b008212315de" />
+<img width="1785" height="814" alt="image" src="https://github.com/user-attachments/assets/2b1c0ef1-303b-415c-8004-91906972b147" />
 
 Entra ID example:
-<img width="1711" height="971" alt="image" src="https://github.com/user-attachments/assets/29bd3e8a-b234-489f-a927-27b93fbb1d87" />
+<img width="1711" height="971" alt="image" src="https://github.com/user-attachments/assets/dc1d9b96-d416-4779-aa2f-18a229acfdb1" />
 
 Active Directory example:
-<img width="1730" height="845" alt="image" src="https://github.com/user-attachments/assets/469a1cfc-dc67-43cd-b5bf-4d97e0a2a795" />
+<img width="1730" height="845" alt="image" src="https://github.com/user-attachments/assets/f95f4ab5-9627-4649-8b32-4e0c022c94c2" />
 
 Change log example:
-<img width="959" height="90" alt="image" src="https://github.com/user-attachments/assets/0a4123de-17dd-41f8-8db2-9f84159a6fdc" />
+<img width="959" height="90" alt="image" src="https://github.com/user-attachments/assets/91a3ab37-0969-42a7-bad0-57fd2c8c618f" />
 
 
 ## Required NinjaOne custom fields
@@ -55,8 +55,7 @@ fields above. Field names can be changed at the top of the script.
 ### Recommended custom field setup
 
 The data fields are recommended to be setup in a dedicated card at the desired device type/role.
-<img width="1253" height="534" alt="image" src="https://github.com/user-attachments/assets/afcfd428-fb37-46fb-91c8-d2f1ab3f7f90" />
-
+<img width="1253" height="534" alt="image" src="https://github.com/user-attachments/assets/d5de5439-ed52-4583-907f-8789177d93f5" />
 
 
 ### Authorized list format
@@ -66,7 +65,8 @@ that are allowed to be local administrators on the machine, e.g.:
 
 This field needs to be created as organization custom field with an inheritance set to device. So authorized admins can be managed organizationwide with per device overides.
 
-<img width="176" height="127" alt="image" src="https://github.com/user-attachments/assets/a89ec11d-b393-4233-8272-db87c1584b74" />
+<img width="176" height="127" alt="image" src="https://github.com/user-attachments/assets/7bd33c6b-5816-44b8-8e01-ca686ad2f1c6" />
+
 
 
 ```
@@ -121,10 +121,12 @@ In NinjaOne create a *Custom Field Condition* on
 `LAPSunauthorizedAdminsFound` with operator `is checked` and attach the
 desired alert / notification channel.
 
-<img width="668" height="113" alt="image" src="https://github.com/user-attachments/assets/8ba7c217-73a2-4527-a9d4-97dc0c7306ca" />
+<img width="668" height="113" alt="image" src="https://github.com/user-attachments/assets/d820b4a4-0d4c-4435-8394-d3cd2b3368a0" />
 
 
- <img width="640" height="386" alt="image" src="https://github.com/user-attachments/assets/38ec7ad7-ad5f-4f49-a9aa-05de5898719e" />
+
+<img width="640" height="386" alt="image" src="https://github.com/user-attachments/assets/bcc67d4a-4a03-4a99-b5ae-46806d73bcbf" />
+
 
 ## Configuration
 
@@ -166,7 +168,8 @@ Add the following **script variables** to the automation:
    | `RemoveUnauthorizedAdminsScope`   | Dropdown | `Disabled`, `Local Only` *(default)*, `Local and Domain`, `All` &mdash; controls which kinds of unauthorized principals are removed from the local Administrators group |
    | `DisableNativeAdmin`              | Checkbox | *(default = on)* &mdash; when on, an enabled built-in `Administrator` account (RID 500) is automatically disabled. The built-in is never *removed* from the local Administrators group, only disabled (CIS Benchmark recommendation). |
 
-<img width="446" height="277" alt="image" src="https://github.com/user-attachments/assets/f4bd05b0-7abe-4f0b-acc3-64647fd14dde" />
+<img width="446" height="277" alt="image" src="https://github.com/user-attachments/assets/f90de5cf-5de1-41df-856b-5271d6fbfda0" />
+
 
 
    The script reads them via `$env:Mode`, `$env:RemoveUnauthorizedAdminsScope`
@@ -175,13 +178,16 @@ Add the following **script variables** to the automation:
    the selected mode includes the audit (`All Functions` or
    `Report Only`).
 
-<img width="543" height="775" alt="image" src="https://github.com/user-attachments/assets/a03d184b-9f02-40a8-96c4-9e3562500c47" />
+<img width="543" height="775" alt="image" src="https://github.com/user-attachments/assets/a1e9449d-8d66-4187-b26c-299a5c50b1d7" />
 
 
 
    **What each removal scope does**
 
-   <img width="545" height="776" alt="image" src="https://github.com/user-attachments/assets/b439be80-4b4b-4126-a71c-c8e7af4776e7" />
+<img width="545" height="781" alt="image" src="https://github.com/user-attachments/assets/197d8372-e429-4995-9a21-694f4d0d9955" />
+
+
+
 
    | Scope                 | Removes from local Administrators                                  | Reports only (still flagged in WYSIWYG) |
    |-----------------------|--------------------------------------------------------------------|------------------------------------------|
@@ -213,7 +219,8 @@ Add the following **script variables** to the automation:
 
    **Built-in Administrator (RID 500)**
 
-<img width="544" height="511" alt="image" src="https://github.com/user-attachments/assets/d31bdaab-ded9-40f4-87ac-af6a7e854290" />
+<img width="544" height="511" alt="image" src="https://github.com/user-attachments/assets/cd499107-3ed3-4f6c-96f9-05700c81c092" />
+
 
    The native local `Administrator` account is treated separately:
 
